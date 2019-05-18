@@ -1,0 +1,105 @@
+/* intalize the data base in commandline */
+CREATE DATABASE readychef;
+\q
+psql readychef < readychef.sql
+psql readychef
+
+/* select unique values from a column */
+select distinct campaign_id from users;
+
+/* select all rows where campaign_id is equal to fb */
+select campaign_id from users where campaign_id = 'FB' limit 10;
+
+/* select condition of campaign_id but only show datetime */
+select dt from users where campaign_id = 'FB' limit 10;
+
+/* count number of rows */
+select count(*) FROM users;
+
+/* count the number of users from facebook */
+select count(*) from users where campaign_id = 'FB';
+
+/* count number of users of each service with a group by */
+select campaign_id, count(*) from users group by campaign_id;
+/*campaign_id | count
+-------------+-------
+FB          |  2192
+RE          |   862
+PI          |   588
+TW          |  1882*/
+
+/* count the number of distinct dates from users table */
+select count(distinct dt) from users;
+
+/* first and last registration date from users */
+select max(dt),min(dt) from users;
+/*max     |    min
+------------+------------
+2013-12-31 | 2013-01-01
+(1 row)*/
+/* mean price for a meal from meals table */
+select avg(price) from meals;
+/*readychef=# select avg(price) from meals;
+         avg
+---------------------
+ 10.6522829904666332
+(1 row)*/
+/* select avg, min, max price by meal type */
+select type,avg(price), min(price), max(price) from meals group by type;
+/*     type    |         avg         | min | max
+------------+---------------------+-----+-----
+ mexican    |  9.6975945017182131 |   6 |  13
+ italian    | 11.2926136363636364 |   7 |  16
+ chinese    |  9.5187165775401070 |   6 |  13
+ french     | 11.5420000000000000 |   7 |  16
+ japanese   |  9.3804878048780488 |   6 |  13
+ vietnamese |  9.2830188679245283 |   6 |  13 */
+
+ /* rename columns */
+ select type,avg(price) as avg_price, min(price), max(price)
+ from meals group by type;
+
+/* group by type and by month */
+select type, date_part('month', dt) as month, avg(price) as avg_price,
+min(price) as min_price , max(price) as max_price
+from meals group by month, type;
+
+/* from events table, select total number of buys, likes, and shares for each
+meal id, use sum(case when event ='bought then 1 else 0 end) */
+select meal_id,SUM(CASE WHEN event='bought' THEN 1 ELSE 0 END)
+from events group by meal_id order by meal_id desc;
+
+/* avg price of each type */
+select type, avg(price) as avg_price
+from meals group by(type);
+
+/* sort results of type column */
+select type, avg(price) as avg_price
+from meals group by(type) order by type;
+
+/* try out desc */
+select type, avg(price) as avg_price
+from meals group by(type) order by type desc;
+
+/* order by two columns */
+select type, price from meals order by type, price desc;
+
+/* columns are also index 0, 1 etc */
+SELECT type, dt FROM meals ORDER BY 1;
+
+/* join events and users on userid */
+select events.userid, users.campaign_id, events.meal_id, events.event from events
+join users on users.userid = events.userid;
+
+/* includ type and price, of only the bought events */
+
+
+select userid, tmstmp as reg_date
+into temporary table reg_table
+from registrations
+
+create temporary table logins_7d_2014_08_14 as
+select userid, count(*) as cnt
+from logins
+where logins.tmstmp > timestamp '2013-08-14' - interval '7 days'
+group by userid

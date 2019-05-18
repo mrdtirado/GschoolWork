@@ -1,0 +1,39 @@
+/* Write a query that returns total amount of revenue from the affiliate network */
+Select sale_price * quantity_sold from sales where source = 'affiliate'
+
+/* write a query that returns total amount of revenue from each source */
+select sale_price * quantity_sold from sales group by(source)
+
+/* write a sql query that returns the net profit for each item */
+select (quantity_sold * sale_price) - ((quantity_sold + quantity_remaining) *
+wholesale_price) from sales group by(item_id)
+
+/* write a sql query that returns the total number of items sold where the sale
+price was greater than 20 */
+select quantity_sold from sales where sale_price > 20
+
+/* design an algorthim that would tell you the minimum sale price for a specific
+item for you to still make a 10% profit if you sold all the remaining stock at
+that price */
+select (quantity_sold * sale_price) - ((quantity_sold + quantity_remaining) *
+wholesale_price) + ((quantity_remaining * sale_price)*1.1)
+
+employee_id 	department_id 	name 	salary
+2 	1 	Jon 	40000
+7 	1 	Linda 	50000
+12 	2 	Ashley 	15000
+1 	0 	Mike 	80000
+
+department_id 	location
+1 	NY
+2 	SF
+3 	Austin
+
+/* Write the result of an inner join talbe of above */
+An inner join would result in 3 rows where mike and austin location are left out
+
+/* Write a left outter join */
+Would only have 4 rows
+
+/* Write a full outter join */
+would have 5 rows that included a sprase row with just Austin and department id
