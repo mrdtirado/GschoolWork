@@ -1,0 +1,42 @@
+class Vector2D:
+
+    def __init__(self, x, y, orx, ory):
+    '''
+    Instantiate the vector x,y points
+    '''
+        self.x = x
+        self.y = y
+        self.orx = 0
+        self.ory  = 0
+
+    def __add__(self, other):
+        '''
+        Adds vectors together
+        '''
+        return (self.x +other.x , self.y + other.y)
+
+    def __str__(self):
+        '''
+        Prints the x and y coordinates of a point
+        '''
+        return '{0}, {1}'.format(self.x, self.y)
+
+    def __sub__(self, other):
+        '''
+        Subtracts vectors from each other
+        '''
+        self.x = self.x *-1
+        self.y = self.y *-1
+        return(self.x + other.x , self.y + other.y)
+
+    def Absolute_Value(self):
+        '''
+        Distance from X,Y to origin
+        '''
+        pass
+
+    def Equal(self,other):
+        '''
+        Return boolean of vector1 = vector2
+        '''
+        pass

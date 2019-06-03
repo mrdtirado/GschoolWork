@@ -1,0 +1,19 @@
+
+/*Between 12/1/2013 10:00:00 PST and 12/8/2013 17:00:00 PST,
+how many completed trips were requested on iphones in City #5?
+(Hint: look at the trips.status column) How about on android phones? */
+/* https://github.com/gSchool/dsi-warmups/blob/master/sql_hitch.md */
+
+Select iphone from trips_request_device_enum
+where completed.trips_status_enum == 1 and city_id.trips == 5
+and request_at.trips between '12/1/2013 10:00:00 PST'
+and '12/8/2013 17:00:00 PST';
+
+Select android from trips_request_device_enum
+where completed.trips_status_enum == 1 and city_id.trips == 5
+and request_at.trips between '12/1/2013 10:00:00 PST'
+and '12/8/2013 17:00:00 PST';
+
+select client_id from trips
+where city_id.trips == 8
+and banned.user = false and request_at.trips

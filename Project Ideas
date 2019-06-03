@@ -1,0 +1,25 @@
+Project Ideas
+
+--
+Tabular data
+
+Marijuana legal areas (Canada pref, colorado etc) that have prision data
+but they must also have what they were incaerated for but also any pennalties
+they have recieved while in jail and create an app that allows suggestion for
+early release for non violent drug offenders
+--
+Mixed Data (CV , NLP Sentiment? (other tabular
+
+Predicting specific argiculture comodoity stock price using satalite CV
+and then using sentiment analysis on how people feel about the comodoity outcome
+and then use that sentiment to create an algorthim to determine range of stock
+bet?
+
+
+--
+
+--
+
+
+
+print("Hello World")
