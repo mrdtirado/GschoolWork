@@ -15,11 +15,24 @@ and then using sentiment analysis on how people feel about the comodoity outcome
 and then use that sentiment to create an algorthim to determine range of stock
 bet?
 
+--
+clone https://app.monkeylearn.com/main/explore/
+Create a website app that will perform sentiment analysis on a text you give
+
+Summarize?
+
+APP for readmission on general summary using NLP MIMIC dataset
+https://forums.fast.ai/t/ulmfit-medical-clinical-text/22623/14
+https://towardsdatascience.com/getting-access-to-mimic-iii-hospital-database-for-data-science-projects-791813feb735
+https://towardsdatascience.com/introduction-to-clinical-natural-language-processing-predicting-hospital-readmission-with-1736d52bc709
+
+
+Stretch Goal
+Aspect Sentiment analysis for hotel
+Urgency detection
+
+Super Stretch
+API for website analyis
+
 
 --
-
---
-
-
-
-print("Hello World")

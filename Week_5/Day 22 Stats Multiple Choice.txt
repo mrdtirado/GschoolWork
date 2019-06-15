@@ -1,0 +1,107 @@
+(Note: some of these questions already have answers.Freebies!)
+
+Q. Let’s say, a “Linear regression” model perfectly fits the training data (train error is zero). Now, Which of the following statement is true?
+A. You will always have test error zero
+B. You can not have test error zero ***
+C. None of the above
+
+Q. In a linear regression problem, we are using “R-squared” to measure goodness-of-fit. We add a feature in linear regression model and retrain the same model.
+Which of the following option is true?
+A. If R Squared increases, this variable is significant.
+B. If R Squared decreases, this variable is not significant.
+C. Individually R squared cannot tell about variable importance. We can’t say anything about it right now. ***
+D. None of these.
+
+Q. Which one of the statement is true regarding residuals in regression analysis?
+A. Mean of residuals is always zero
+B. Mean of residuals is always less than zero
+C. Mean of residuals is always greater than zero *
+D. There is no such rule for residuals. ?
+
+Q. Which of the one is true about Heteroskedasticity?
+A. Linear Regression with varying error terms ***
+B. Linear Regression with constant error terms
+C. Linear Regression with zero error terms
+D. None of these
+
+Q. Which of the following assumptions do we make while deriving linear regression parameters?
+1. The true relationship between dependent y and predictor x is linear
+2. The model errors are statistically independent **
+3. The errors are normally distributed with a 0 mean and constant standard deviation
+4. The predictor x is non-stochastic and is measured error-free
+
+Q. To test linear relationship of y(dependent) and x(independent) continuous variables, which of the following plot best suited?
+A. Scatter plot***
+B. Barchart
+C. Histograms
+D. None of these
+
+Q. Generally, which of the following method(s) is used for predicting continuous dependent variable?
+1. Linear Regression *
+2. Logistic Regression
+A. 1 and 2 ***
+B. only 1
+C. only 2
+D. None of these.
+
+Q. Suppose we have generated the data with help of polynomial regression of degree 3 (degree 3 will perfectly fit this data). Now consider below points and choose the option based on these points.
+1. Simple Linear regression will have high bias and low variance 
+2. Simple Linear regression will have low bias and high variance
+3. polynomial of degree 3 will have low bias and high variance
+4. Polynomial of degree 3 will have low bias and Low variance
+A. Only 1 ***
+B. 1 and 3
+C. 1 and 4
+D. 2 and 4
+Solution: C
+If we fit higher degree polynomial greater than 3, it will overfit the data because model will become more complex. If we fit the lower degree polynomial less than 3 which means that we have less complex model so in this case high bias and low variance. But in case of degree 3 polynomial it will have low bias and low variance.
+
+Q. Suppose you are training a linear regression model. Now consider these points.
+1. Overfitting is more likely if we have less data
+2. Overfitting is more likely when the hypothesis space is small
+Which of the above statement(s) are correct?
+A. Both are False
+B. 1 is False and 2 is True
+C. 1 is True and 2 is False ***
+D. Both are True
+Solution: C
+1.With small training dataset, it’s easier to find a hypothesis to fit the training data exactly i.e. overfitting.
+2. We can see this from the bias-variance trade-off. When hypothesis space is small, it has higher bias and lower variance. So with a small hypothesis space, it’s less likely to find a hypothesis to fit the data exactly i.e. underfitting.
+
+Q. Which of the following statement(s) can be true post adding a variable in a linear regression model?
+1. R-Squared and Adjusted R-squared both increase
+2. R-Squared increases and Adjusted R-squared decreases
+3. R-Squared decreases and Adjusted R-squared decreases
+4. R-Squared decreases and Adjusted R-squared increases
+A. 1 and 2 ***
+B. 1 and 3
+C. 2 and 4
+D. None of the above
+Solution: A
+Each time when you add a feature, R squared always either increase or stays constant, but it is not true in case of Adjusted R squared. If it increases, the feature would be significant.
+
+Q. How many coefficients do you need to estimate in a simple linear regression model (One independent variable)?
+A. 1 ***
+B. 2 
+C. Can’t Say
+
+Q. If two variables are correlated, is it necessary that they have a linear relationship?
+A. Yes
+B. No ***
+
+Q. How does number of observations influence overfitting? Choose the correct answer(s).
+Note: Rest all parameters are same
+1. In case of fewer observations, it is easy to overfit the data.
+2. In case of fewer observations, it is hard to overfit the data.
+3. In case of more observations, it is easy to overfit the data.
+4. In case of more observations, it is hard to overfit the data.
+A. 1 and 4 ***
+B. 2 and 3
+C. 1 and 3
+D. None of theses
+
+Q. In a simple linear regression model (One independent variable), If we change the input variable by 1 unit. How much output variable will change?
+A: By 1
+B. No change
+C. By intercept
+D. By its Slope ***
