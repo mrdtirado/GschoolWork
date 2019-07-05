@@ -1,6 +1,7 @@
 Project Ideas
 
 --
+DEAD NO DATA
 Tabular data
 
 Marijuana legal areas (Canada pref, colorado etc) that have prision data
@@ -8,6 +9,7 @@ but they must also have what they were incaerated for but also any pennalties
 they have recieved while in jail and create an app that allows suggestion for
 early release for non violent drug offenders
 --
+DEAD NO TABULAR DATA FOR MIXED INPUT
 Mixed Data (CV , NLP Sentiment? (other tabular
 
 Predicting specific argiculture comodoity stock price using satalite CV
@@ -16,6 +18,7 @@ and then use that sentiment to create an algorthim to determine range of stock
 bet?
 
 --
+DEAD
 clone https://app.monkeylearn.com/main/explore/
 Create a website app that will perform sentiment analysis on a text you give
 
@@ -34,5 +37,96 @@ Urgency detection
 Super Stretch
 API for website analyis
 
+---
+build a recommendation system for steam games using nlp + cattegories
+https://cseweb.ucsd.edu/~jmcauley/datasets.html#goodreads
 
---
+-----
+Predict popularity and rating of yelp restaurant using image and review
+for a mixed input keras
+http://cs229.stanford.edu/proj2017/final-reports/5244334.pdf
+FLAWS: TOO POPULAR, who cares about rating
+
+--------------
+Satalite data
+Use Cars overhead labeled dataset with 0.15 M per pixel to label satalite airbus
+dataset or another high resolution dataset to predict stock price every year.
+Multiple input dataset? stock price at each quarter is tabular + image dataset
+need to use same encoder for each image that falls within a quarter
+
+** STRETCH Goal
+Create an aws pipline that could take in a live feed from a drone
+and maybe use sagemaker instead of amazon rekognition
+Pipline should have website level ui intake to upload drone video
+https://github.com/aws-samples/amazon-rekognition-video-analyzer
+
+** remote sensing
+** bing?
+
+
+DATA AVAILABLE:
+General Agriculture Data NAIP High resolution data all states
+https://azure.microsoft.com/en-us/services/open-datasets/catalog/naip/
+
+Training land cover data high resolution Microsoft
+https://github.com/Azure/pixel_level_land_classification
+https://aiforearth.portal.azure-api.net/docs/services/5ada7702b5f82394929929a9/operations/5ab5905bb8d61f0e48853404
+
+Training building footprint data high resolution microsoft
+https://github.com/microsoft/USBuildingFootprints
+
+Training Denmark agriculture outlines & classification longtiduinal 2015-2018
+https://kortdata.fvm.dk/download/Index?page=Markblokke_Marker
+IDEA: Train to predict stock commodity price in Denmark
+
+Training Objection detection multiclassification high resolution
+https://captain-whu.github.io/DOTA/index.html
+
+Training objection detection cars overhead
+https://gdo152.llnl.gov/cowc/
+
+GENERAL DATA
+APPLIED to planet dataset allows 10 gig download a month
+
+Training data for road extraction, building detection, land cover classification
+http://deepglobe.org/challenge.html
+
+TODO
+3rd party digitalglobe data request from esa earth
+https://earth.esa.int/web/guest/pi-community/apply-for-data/3rd-party?IFRAME_SRC=%2Fpi%2Fesa%3FdisplayMode%3Dcenter%26sideExpandedNavigationBoxId%3DCat1Access%26cmd%3Daodetail%26topSelectedNavigationNodeId%3DDATA_ACCESS%26targetIFramePage%3D%252Fweb%252Fguest%252Fpi-community%252Fapply-for-data%252F3rd-party%26ts%3D1561262818733%26colorTheme%3D03%26sideNavigationType%3DDATA_ACCESS%26aoid%3D1482
+
+TECHNIQUE
+Pan-Sharpen
+http://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/fundamentals-of-panchromatic-sharpening.htm
+
+
+--------------------
+Remote Sensing Resources
+http://www.spatialpoints.com/category/resources/
+https://www.nrcan.gc.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/tutorial-fundamentals-remote-sensing/9309
+
+https://developers.google.com/earth-engine/
+
+
+
+----------------------------------------------------------------
+IOS app for face detection that will update for unknown faces
+
+https://developer.apple.com/videos/play/wwdc2019/704/
+
+PIPELINE
+
+Original Models (CV face detection)
+Deployed to ios (core ml)
+https://www.pyimagesearch.com/2018/04/23/running-keras-models-on-ios-with-coreml/
+
+object detect unknown
+
+use speech to text to label Person
+
+Updates cv model using (core ml)
+https://developer.apple.com/documentation/coreml/mlupdatetask
+
+process new video stream and label person correctly
+
+text to speech 'you're looking at kim'
